@@ -15,16 +15,15 @@ from django.db.models import CharField, IntegerField
 
 
 class BookModel(models.Model):
-    title = CharField(
+    title = models.CharField(
         max_length=20
     )
-    pages = IntegerField(
-        default=0
+    pages = models.IntegerField(
     )
-    description = CharField(
+    description = models.TextField(
         max_length=100,
-        default=0
+        default=''
     )
-    author = CharField(
+    author = models.CharField(
         max_length=10
     )
